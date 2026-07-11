@@ -245,7 +245,7 @@
     }
 
     .hero-photo {
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 4 / 3;
       border-radius: calc(var(--radius) - 8px);
       overflow: hidden;
       background: #111;
