@@ -379,11 +379,37 @@
     }
 
     .project-link {
-      display: inline-block;
-      margin-top: 18px;
-      font-weight: 600;
-      color: var(--text);
-    }
+  display: inline-block;
+  margin-top: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+.project-link:hover {
+  opacity: 0.8;
+  border-color: #fff;
+}
+.ensaio-card {
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ensaio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 
     .gallery-grid {
       grid-template-columns: repeat(3, 1fr);
