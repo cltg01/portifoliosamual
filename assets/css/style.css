@@ -86,8 +86,11 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 0 clamp(22px, 4vw, 64px);
-  mix-blend-mode: difference;
-  color: #fff
+
+  color: #fff;
+
+
+  text-shadow: 0 1px 12px rgba(0, 0, 0, .45);
 }
 
 .logo {
@@ -122,12 +125,13 @@ button {
 }
 
 .site-nav a {
-  opacity: .7;
-  transition: .25s
+  opacity: 1;
+  color: #fff;
+  transition: opacity .25s, color .25s;
 }
 
 .site-nav a:hover {
-  opacity: 1
+  opacity: .7;
 }
 
 .header-cta {
@@ -672,10 +676,19 @@ footer {
   opacity: 1
 }
 
-.custom-cursor,
+/* .custom-cursor,
 .custom-cursor a,
 .custom-cursor button {
   cursor: none
+} */
+ /* Mantém o cursor nativo sempre visível */
+.custom-cursor {
+  cursor: default;
+}
+
+.custom-cursor a,
+.custom-cursor button {
+  cursor: pointer;
 }
 
 .lightbox {
@@ -916,22 +929,25 @@ footer {
     border-bottom: 1px solid var(--line)
   }
 
-  .menu-toggle {
-    display: flex;
-    width: 35px;
-    height: 35px;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    position: absolute;
-    right: 110px
-  }
+ .menu-toggle {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  right: 125px;
+}
 
   .menu-toggle span {
-    height: 1px;
-    width: 22px;
-    background: #fff
-  }
+  display: block;
+  height: 2px;
+  width: 23px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .55);
+}
 
   .header-cta {
     font-size: 10px
@@ -1013,9 +1029,9 @@ footer {
     display: none
   }
 
-  .menu-toggle {
-    right: 92px
-  }
+ .menu-toggle {
+  right: 125px;
+}
 
   .hero {
     min-height: 620px
@@ -1151,5 +1167,33 @@ footer {
   .hero-image-wrap,
   .about-image {
     transform: none !important
+  }
+}
+@media (max-width: 600px) {
+
+  .site-header {
+    height: 70px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, .38) 0%,
+      rgba(0, 0, 0, .12) 65%,
+      transparent 100%
+    );
+  }
+
+  .site-nav.open {
+    top: 76px;
+    background: rgba(8, 8, 8, .97);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+  }
+
+  .header-cta {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, .75);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+  }
+
+  .menu-toggle {
+    right: 125px;
   }
 }

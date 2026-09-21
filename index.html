@@ -207,13 +207,83 @@
     });
   }
 
-  // Galeria horizontal controlada pelo wheel quando o mouse está sobre ela.
-  const horizontal = $('[data-horizontal]');
-  if (horizontal && finePointer) {
+ // Galeria horizontal
+const horizontal = $('[data-horizontal]');
+
+if (horizontal) {
+
+  // Desktop: mouse wheel controla a galeria horizontal
+  if (finePointer) {
     horizontal.addEventListener('wheel', e => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { e.preventDefault(); horizontal.scrollLeft += e.deltaY * 1.15; }
-    }, {passive:false});
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        horizontal.scrollLeft += e.deltaY * 1.15;
+      }
+    }, { passive: false });
   }
+
+  // Passagem automática
+  let galleryTimer;
+  let galleryPaused = false;
+
+  const startGallery = () => {
+    clearInterval(galleryTimer);
+
+    galleryTimer = setInterval(() => {
+
+      if (galleryPaused) return;
+
+      const maxScroll = horizontal.scrollWidth - horizontal.clientWidth;
+
+      if (horizontal.scrollLeft >= maxScroll - 5) {
+        horizontal.scrollTo({
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        horizontal.scrollBy({
+          left: window.innerWidth <= 600
+            ? window.innerWidth * 0.78 + 18
+            : window.innerWidth * 0.55,
+          behavior: 'smooth'
+        });
+      }
+
+    }, 3500);
+  };
+
+  // Pausa quando o usuário interage
+  horizontal.addEventListener('mouseenter', () => {
+    galleryPaused = true;
+  });
+
+  horizontal.addEventListener('mouseleave', () => {
+    galleryPaused = false;
+  });
+
+  horizontal.addEventListener('touchstart', () => {
+    galleryPaused = true;
+  }, { passive: true });
+
+  horizontal.addEventListener('touchend', () => {
+    setTimeout(() => {
+      galleryPaused = false;
+    }, 2500);
+  }, { passive: true });
+
+  horizontal.addEventListener('pointerdown', () => {
+    galleryPaused = true;
+  });
+
+  horizontal.addEventListener('pointerup', () => {
+    setTimeout(() => {
+      galleryPaused = false;
+    }, 2500);
+  });
+
+  startGallery();
+}
+ 
 
   // Menu mobile.
   const menu = $('.menu-toggle'), nav = $('.site-nav');
