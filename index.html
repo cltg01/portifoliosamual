@@ -1,426 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samuel Davidson | Fotógrafo</title>
-  <meta
-    name="description"
-    content="Portfólio profissional de fotógrafo com projetos, galeria de imagens, vídeos e contato."
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samuel Davidson — fotografia, direção visual e narrativas em imagem.">
+  <title>Samuel Davidson — Fotografia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
- <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-line"><span></span></div>
+  <div class="cursor" aria-hidden="true"><i></i><span>VIEW</span></div>
 
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="#inicio" class="brand">
-        <span class="brand-mark">SD</span>
-        <span>Samuel Davidson</span>
-      </a>
-
-      <nav class="nav">
-  <a href="#sobre">Sobre</a>
-  <a href="#projetos">Projetos</a>
-  <a href="ensaios.html">Ensaios</a>
-  <a href="#equipe">Equipe</a>
-  <a href="#parcerias">Parcerias</a>
-  <a href="#contato">Contato</a>
-</nav>
-
-    </div>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="Samuel Davidson — início">
+      <span>SD</span><b>Samuel Davidson</b>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="site-nav">
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#ensaios">Ensaios</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="header-cta magnetic" href="https://wa.me/5585986258448?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener">Orçamento <span>↗</span></a>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Fotógrafo • Direção Visual • Portfólio</span>
-          <h1>Fazendo arte com olhar direcionado</h1>
-          <p>
-            Sou <strong style="color:#fff;">Samuel Davidson</strong>, fotógrafo especializado em retratos,
-            moda, campanhas visuais e narrativa estética. Meu trabalho busca unir
-            técnica, direção e sensibilidade para criar imagens com impacto,
-            elegância e profundidade.
-          </p>
+      <div class="hero-image-wrap" data-parallax="0.035">
+        <img class="hero-image" src="assets/perfil.jpg" alt="Samuel Davidson — fotografia de destaque">
+        <div class="hero-shade"></div>
+      </div>
+      <div class="hero-top"><span>Fotografia / Direção visual</span><span>Fortaleza — CE</span></div>
+      <div class="hero-title">
+        <p class="eyebrow">Samuel Davidson</p>
+        <h1>Olhar<br><em>direcionado.</em></h1>
+        <p class="hero-intro">Retratos, eventos e histórias transformadas em imagem — com presença, direção e intenção.</p>
+      </div>
+      <div class="hero-bottom">
+        <span>Scroll para explorar</span>
+        <span class="scroll-mark">↓</span>
+        <span>01 / 05</span>
+      </div>
+    </section>
 
-          <div class="hero-actions">
-            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-            <a href="#contato" class="btn btn-secondary">Falar comigo</a>
-          </div>
-        </div>
+    <section class="manifesto section-pad">
+      <div class="section-index">00 / O OLHAR</div>
+      <div class="manifesto-copy">
+        <p class="eyebrow">Não é só registrar.</p>
+        <h2>É perceber o instante antes que ele passe.</h2>
+        <p class="manifesto-text">Cada trabalho nasce da combinação entre técnica e sensibilidade. A câmera registra o que acontece; o olhar decide o que merece permanecer.</p>
+      </div>
+    </section>
 
-        <div class="hero-card">
-          <div class="hero-photo">
-            <!-- Troque pela sua foto principal -->
-            <img src="assets/perfil.jpg" alt="Foto de destaque do fotógrafo" />
-          </div>
+    <section class="works section-pad" id="trabalhos">
+      <div class="section-heading">
+        <div><span class="eyebrow">01 / Trabalhos</span><h2>Histórias em <em>frames.</em></h2></div>
+        <p>Uma seleção de projetos em que luz, movimento e pessoas conduzem a narrativa.</p>
+      </div>
 
-          <div class="hero-meta">
+      <div class="work-list">
+        <a class="work-item magnetic-area" href="projetos/julie-wein.html" data-cursor="OPEN">
+          <div class="work-number">01</div>
+          <div class="work-image"><img src="assets/img/julie wein/camdavx-415.jpg" alt="Julie Wein no palco" loading="lazy"></div>
+          <div class="work-info"><span>Música / Evento</span><h3>Julie Wein</h3><p>Palco, luz e presença.</p><b>Ver projeto <i>↗</i></b></div>
+        </a>
+        <a class="work-item magnetic-area" href="projetos/ensaios-familia.html" data-cursor="OPEN">
+          <div class="work-number">02</div>
+          <div class="work-image"><img src="assets/img/familia/IMG_2512.jpg" alt="Ensaio de família" loading="lazy"></div>
+          <div class="work-info"><span>Retrato / Lifestyle</span><h3>Ensaio de Família</h3><p>Afeto sem pose forçada.</p><b>Ver projeto <i>↗</i></b></div>
+        </a>
+        <a class="work-item magnetic-area" href="projetos/momento-oracao.html" data-cursor="OPEN">
+          <div class="work-number">03</div>
+          <div class="work-image"><img src="assets/img/momento de oracao/IMG_2003.jpg" alt="Momento de oração" loading="lazy"></div>
+          <div class="work-info"><span>Religioso / Autoral</span><h3>Momento de Oração</h3><p>Silêncio, cuidado e expressão.</p><b>Ver projeto <i>↗</i></b></div>
+        </a>
+      </div>
+    </section>
 
-            <div class="meta-box">
-              <strong>+ 2 anos</strong>
-              <span>De experiência</span>
-            </div>
-            <div class="meta-box">
-              <strong>Ensaios & Eventos</strong>
-              <span>Especialidade</span>
-            </div>
-             <div class="meta-box">
-              <strong>Produção & Audiovisual</strong>
-              <span>Especialidade</span>
-            </div>
-          </div>
+    <section class="gallery-section section-pad" id="ensaios">
+      <div class="section-heading gallery-heading">
+        <div><span class="eyebrow">02 / Galeria</span><h2>Momentos que<br><em>continuam.</em></h2></div>
+        <p>Arraste, role ou passe o mouse. A galeria foi pensada para ser explorada, não apenas percorrida.</p>
+      </div>
+      <div class="horizontal-gallery" data-horizontal>
+        <figure class="gallery-frame gallery-frame-wide" data-lightbox data-caption="Fotografia automotiva">
+          <img src="assets/IMG_4914.jpg" alt="Fotografia automotiva" loading="lazy"><figcaption>01 / Automotiva</figcaption>
+        </figure>
+        <figure class="gallery-frame" data-lightbox data-caption="Memórias que marcam">
+          <img src="assets/IMG_1786.jpg" alt="Memórias que marcam" loading="lazy"><figcaption>02 / Memórias</figcaption>
+        </figure>
+        <figure class="gallery-frame" data-lightbox data-caption="Detalhes que chamaram atenção">
+          <img src="assets/IMG_1394.jpg" alt="Detalhes" loading="lazy"><figcaption>03 / Detalhes</figcaption>
+        </figure>
+        <figure class="gallery-frame" data-lightbox data-caption="Adrenalina em movimento">
+          <img src="assets/IMG_4139.jpg" alt="Motocross" loading="lazy"><figcaption>04 / Movimento</figcaption>
+        </figure>
+        <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Além dos limites">
+          <img src="assets/IMG_1087.jpg" alt="Ação e movimento" loading="lazy"><figcaption>05 / Limites</figcaption>
+        </figure>
+        <div class="gallery-end"><span>FIM DA SESSÃO</span><strong>↘</strong></div>
+      </div>
+    </section>
+
+    <section class="process section-pad">
+      <div class="section-index">03 / PROCESSO</div>
+      <div class="process-layout">
+        <div class="process-copy"><span class="eyebrow">Por trás da fotografia</span><h2>Antes do<br><em>clique.</em></h2><p>Direção, enquadramento, luz e timing fazem parte da imagem final. O resultado começa muito antes do disparo.</p></div>
+        <div class="process-steps">
+          <article><span>01</span><h3>Observar</h3><p>Entender a pessoa, o ambiente e aquilo que precisa ser contado.</p></article>
+          <article><span>02</span><h3>Direcionar</h3><p>Construir o enquadramento sem tirar a naturalidade do momento.</p></article>
+          <article><span>03</span><h3>Capturar</h3><p>Esperar a fração de segundo em que tudo encontra seu lugar.</p></article>
         </div>
       </div>
     </section>
 
-    <div class="container">
-      <div class="divider"></div>
-    </div>
-
-    <section class="section" id="sobre">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">Apresentação</span>
-            <h2>Sobre meu olhar</h2>
-          </div>
-          <p class="lead">
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <article class="card">
-            <h3>Minha abordagem</h3> <br>
-            <p>
-              Com uma composição limpa e um olhar técnico refinado, busco registrar histórias e transformar a percepção de cada cena através da fotografia. <br> <br>
-
-Concentro minha atuação em duas grandes vertentes: Ensaios & Eventos (com ampla experiência em congressos religiosos, 
-espetáculos orquestrais, aniversários e competições esportivas) e suporte em Produção & Audiovisual. 
-Desenvolvo cada projeto com o máximo profissionalismo, sempre fazendo arte com olhar direcionado.
-            </p>
-             
-          </article>
-
-          <aside class="card">
-            <div class="info-list">
-              <div class="info-item">
-                <small>Localidade</small>
-                <strong>Fortaleza e regiões metropolitanas</strong>
-              </div>
-              <div class="info-item">
-                <small>Especialidades</small>
-                <strong>Ensaios, Congressos religiosos, Lifestyle, Comercial</strong>
-              </div>
-              <div class="info-item">
-                <small>Disponibilidade</small>
-                <strong>Conforme agendamento</strong>
-              </div>
-              <div class="info-item">
-                <small>E-mail</small>
-                <strong>contato.camdavidson@gmail.com</strong>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
+    <section class="about section-pad" id="sobre">
+      <div class="about-image" data-parallax="0.02"><img src="assets/perfil.jpg" alt="Samuel Davidson" loading="lazy"></div>
+      <div class="about-copy"><span class="eyebrow">04 / Sobre</span><h2>Fotografia com<br><em>presença.</em></h2><p>Sou Samuel Davidson, fotógrafo com atuação em ensaios, eventos, congressos, espetáculos e projetos audiovisuais. Meu trabalho procura unir técnica, direção e sensibilidade para transformar cenas reais em imagens que continuam falando depois do evento.</p><div class="about-meta"><span>Fortaleza e região metropolitana</span><span>Ensaios · Eventos · Lifestyle · Comercial</span></div></div>
     </section>
 
-    <section class="section" id="projetos">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">Projetos</span>
-            <h2>Trabalhos selecionados</h2>
-          </div>
-          <p class="lead">
-           Aqui você acompanha algum dos meus principais projetos. Observando a seriedade e dedicação que tenho que cada projeto.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-          <article class="card project-card">
-            <div class="project-cover">
-              <img src="assets/img/julie wein/camdavx-415.jpg" alt="Projeto editorial em estúdio" />
-            </div>
-            <div class="project-content">
-              <div class="project-meta">Eventos • Música • 2025</div>
-              <h3>Julie Wein</h3>
-              <p>
-                Cada apresentação é única. Através da fotografia, registramos a intensidade do palco, a emoção da artista e a conexão com o público, transformando momentos efêmeros em imagens que permanecem.
-              </p>
-            <a href="projetos/julie-wein.html" class="project-link">Ver projeto completo</a>
-            </div>
-          </article>
-           <article class="card project-card">
-            <div class="project-cover">
-              <img src="assets/img/familia/IMG_2512.jpg" alt="Projeto comercial para marca" />
-            </div>
-            <div class="project-content">
-              <div class="project-meta">Retrato • Lifestyle • 2026</div>
-              <h3>Ensaio de Família</h3>
-              <p>
-                Os melhores momentos da vida merecem ser lembrados. Cada fotografia foi criada para registrar o carinho, a cumplicidade e os laços que tornam cada família única, 
-                transformando instantes em lembranças para toda a vida.
-              </p>
-              <a href="projetos/ensaios-familia.html" class="project-link">Ver projeto completo</a>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <div class="project-cover">
-              <img src="assets/img/momento de oracao/IMG_2003.jpg" alt="Projeto de retrato autoral" />
-            </div>
-            <div class="project-content">
-              <div class="project-meta">Fotografia Religiosa • Autoral • 2026</div>
-              <h3>Momento de Oração</h3>
-              <p>
-                Um momento entre mulheres de oração, mulheres dedicadas a obra e busca pela obra de Deus. 
-                Expressões e cuidado é algo importante que se observa nesse projeto. O cuidado de Deus é nítido para com cada uma...
-              </p>
-             <a href="projetos/momento-oracao.html" class="project-link">Ver projeto completo</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-   <section class="section showcase-section" id="momentos">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <span class="eyebrow">Fotos</span>
-        <h2>Momentos que continuam em movimento</h2>
-      </div>
-      <p class="lead">
-        Uma seleção visual pensada para transmitir atmosfera, direção e presença.
-        Passe o mouse pelos cards para revelar o evento e a narrativa de cada cena.
-      </p>
-    </div>
-
-    <div class="showcase-grid">
-      <article class="media-card featured" data-event="Editorial Noir">
-        <img src="assets/IMG_4914.jpg" alt="Editorial Noir" />
-        <div class="media-overlay"></div>
-
-        <div class="media-pop">
-          <span class="media-kicker">Exposição</span>
-          <h3>Fotografia Automotiva</h3>
-          <p>Cada detalhe. Cada curva. Cada história.</p>
-        </div>
-      </article>
-
-      <article class="media-card" data-event="Fashion Session">
-        <img src="assets/IMG_1786.jpg" alt="Fashion Session" />
-        <div class="media-overlay"></div>
-
-        <div class="media-pop">
-          <span class="media-kicker">Lembraças</span>
-          <h3>Memórias que marcam</h3>
-          <p>Alegria, amor, paz e gratidão é a essência</p>
-        </div>
-      </article>
-       <article class="media-card" data-event="Fashion Session">
-        <img src="assets/IMG_1394.jpg" alt="Fashion Session" />
-        <div class="media-overlay"></div>
-
-        <div class="media-pop">
-          <span class="media-kicker">Lembraças</span>
-          <h3>Detalhes que chamaram atenção</h3>
-          <p>Detalhe, nitidez, e cor é o que você encontra por aqui.</p>
-        </div>
-      </article>
-      <article class="media-card" data-event="Fashion Session">
-        <img src="assets/IMG_4139.jpg" alt="Fashion Session" />
-        <div class="media-overlay"></div>
-
-        <div class="media-pop">
-          <span class="media-kicker">Evento</span>
-          <h3>Fashion Session</h3>
-          <p>Textura, atitude e construção estética.</p>
-        </div>
-      </article>
-
-
-      <article class="media-card" data-event="Lifestyle Frame">
-        <img src="assets/IMG_1087.jpg" alt="Lifestyle Frame" />
-        <div class="media-overlay"></div>
-
-        <div class="media-pop">
-          <span class="media-kicker">Campanha</span>
-          <h3>Lifestyle Frame</h3>
-          <p>Narrativa natural com acabamento premium.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-<section class="section" id="equipe">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <span class="eyebrow">Equipe</span>
-        <h2>Quem faz acontecer</h2>
-      </div>
-      <p class="lead">
-        Pessoas que colaboram com direção, produção, apoio e execução dos projetos.
-      </p>
-    </div>
-
-    <div class="projects-grid">
-      <article class="card">
-        <h3>Samuel Davidson</h3>
-        <p>Fotógrafo, direção visual e cobertura de ensaios, eventos e projetos autorais.</p>
-      </article>
-
-      <article class="card">
-        <h3>Nome da pessoa</h3>
-        <p>Produção, organização de set, apoio criativo e acompanhamento de projeto.</p>
-      </article>
-
-      <article class="card">
-        <h3>Nome da pessoa</h3>
-        <p>Assistência técnica, making of, iluminação ou audiovisual.</p>
-      </article>
-    </div>
-  </div>
-</section>
-<section class="section" id="parcerias">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <span class="eyebrow">Parcerias</span>
-        <h2>Marcas e colaborações</h2>
-      </div>
-      <p class="lead">
-        Projetos desenvolvidos em colaboração com artistas, marcas, produtores e iniciativas visuais.
-      </p>
-    </div>
-
-    <div class="projects-grid">
-      <article class="card">
-        <h3>Julie Wein</h3>
-        <p>Registro de apresentação musical com foco em presença de palco e narrativa visual.</p>
-      </article>
-
-      <article class="card">
-        <h3>Nome da parceria</h3>
-        <p>Descrição curta da colaboração realizada, objetivo do projeto e linguagem visual aplicada.</p>
-      </article>
-
-      <article class="card">
-        <h3>Nome da parceria</h3>
-        <p>Descrição curta da colaboração realizada, objetivo do projeto e linguagem visual aplicada.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-    <section class="section" id="contato">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">Contato & Redes</span>
-            <h2>Vamos criar uma memória?</h2>
-          </div>
-        
-        </div>
-
-        <div class="social-grid">
-          <div class="card">
-            <h3>Redes sociais</h3>
-            <div class="social-links">
-              <a href="https://www.instagram.com/davidson.lens?igsh=MXNyaGl3b3Bka2Q1ZQ==" target="_blank" rel="noopener noreferrer">
-                <span>Instagram</span>
-                <strong>@davidson.lens</strong>
-              </a>
-
-            
-              <a href="https://youtube.com/@davidsonvlogs-z4c?si=Hjs-RU_k3oznJrTU" target="_blank" rel="noopener noreferrer">
-                <span>YouTube</span>
-                <strong>@davidsonvlogs</strong>
-              </a>
-
-              <a href="https://www.linkedin.com/in/samuel-davidson-soares-do-nascimento/" target="_blank" rel="noopener noreferrer">
-                <span>LinkedIn</span>
-                <strong>in/samuel-davidson-soares-do-nascimento/</strong>
-              </a>
-            </div>
-          </div>
-
-          <div class="card contact-box">
-            <div>
-              <h3>Contato direto</h3>
-              <p style="margin-top:12px;">
-                Disponível para retratos, campanhas, editoriais, projetos autorais,
-                collabs e trabalhos comerciais.
-              </p>
-
-              <div class="info-list" style="margin-top:24px;">
-                <div class="info-item">
-                  <small>E-mail</small>
-                  <strong>contato.camdavidson@gmail.com</strong>
-                </div>
-                <div class="info-item">
-                  <small>WhatsApp</small>
-                  <strong>+55 (85) 98625-8448</strong>
-                </div>
-                <div class="info-item">
-                  <small>Localização</small>
-                  <strong>Maracanaú CE • Atendimentos sob agendamento</strong>
-                </div>
-              </div>
-            </div>
-
-           <a class="btn btn-primary" href="https://wa.me/5585986258448?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank">
-    Solicitar orçamento
-</a>
-          </div>
-        </div>
-      </div>
+    <section class="contact section-pad" id="contato">
+      <div class="contact-top"><span class="eyebrow">05 / Contato</span><span>Disponível conforme agendamento</span></div>
+      <h2>Tem uma história<br>para <em>contar?</em></h2>
+      <div class="contact-bottom"><p>Vamos conversar sobre o próximo ensaio, evento ou projeto.</p><a class="contact-link magnetic" href="https://wa.me/5585986258448?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener">Falar no WhatsApp <span>↗</span></a></div>
+      <div class="contact-details"><a href="mailto:contato.camdavidson@gmail.com">contato.camdavidson@gmail.com</a><a href="https://www.instagram.com/davidson.lens" target="_blank" rel="noopener">@davidson.lens</a><span>Maracanaú / Fortaleza — CE</span></div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Samuel Davidson. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  <footer><span>© <span id="year"></span> Samuel Davidson</span><span>Fotografia / Direção Visual</span></footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Fechar">×</button><button class="lightbox-prev" aria-label="Anterior">←</button><div class="lightbox-media"><img src="" alt=""></div><button class="lightbox-next" aria-label="Próxima">→</button><div class="lightbox-caption"></div>
+  </div>
 
-  const mediaCards = document.querySelectorAll('.media-card');
+  <script src="assets/js/main.js"></script>
+  <script>
+    (() => {
+  const $ = (s, root = document) => root.querySelector(s);
+  const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 
-  mediaCards.forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
+  $('#year') && ($('#year').textContent = new Date().getFullYear());
 
-      card.style.setProperty('--mx', `${x}%`);
-      card.style.setProperty('--my', `${y}%`);
-    });
-  });
-
-  const videoCard = document.querySelector('.video-card-dynamic');
-
-  if (videoCard) {
-    videoCard.addEventListener('click', () => {
-      window.open('https://www.youtube.com/watch?v=lIuwtif3UhU', '_blank');
+  // Cursor de visor: some em touch e muda de mensagem conforme a área.
+  const cursor = $('.cursor');
+  const finePointer = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (cursor && finePointer) {
+    document.body.classList.add('custom-cursor');
+    window.addEventListener('pointermove', e => {
+      cursor.style.transform = `translate3d(${e.clientX}px,${e.clientY}px,0)`;
+    }, {passive:true});
+    $$('[data-cursor], [data-lightbox], .magnetic, a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.classList.add('active');
+        const label = el.dataset.cursor || (el.matches('[data-lightbox]') ? 'ZOOM' : el.matches('a') ? 'OPEN' : 'VIEW');
+        const span = $('span', cursor); if (span) span.textContent = label;
+      });
+      el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
     });
   }
-</script>
 
+  // Barra de progresso.
+  const progress = $('.scroll-line span');
+  const updateProgress = () => {
+    if (!progress) return;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.width = `${max ? (scrollY / max) * 100 : 0}%`;
+  };
+  addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
 
+  // Entrada suave dos elementos.
+  const reveal = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); reveal.unobserve(entry.target); } });
+  }, {threshold:.12});
+  $$('.work-item, .manifesto-copy, .process-copy, .process-steps article, .about-copy, .section-heading, .gallery-frame, .contact').forEach(el => { el.classList.add('reveal'); reveal.observe(el); });
+
+  // Parallax discreto, apenas em desktop.
+  if (finePointer) {
+    const parallaxEls = $$('[data-parallax]');
+    addEventListener('scroll', () => {
+      const viewport = innerHeight;
+      parallaxEls.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > viewport) return;
+        const amount = Number(el.dataset.parallax || .02);
+        const offset = (r.top - viewport / 2) * amount;
+        el.style.setProperty('--parallax', `${offset}px`);
+      });
+    }, {passive:true});
+  }
+
+  // Botões magnéticos — pequeno movimento, sem exagero.
+  if (finePointer) {
+    $$('.magnetic').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width/2) * .12;
+        const y = (e.clientY - r.top - r.height/2) * .12;
+        el.style.transform = `translate(${x}px,${y}px)`;
+      });
+      el.addEventListener('pointerleave', () => el.style.transform = '');
+    });
+  }
+
+  // Galeria horizontal controlada pelo wheel quando o mouse está sobre ela.
+  const horizontal = $('[data-horizontal]');
+  if (horizontal && finePointer) {
+    horizontal.addEventListener('wheel', e => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { e.preventDefault(); horizontal.scrollLeft += e.deltaY * 1.15; }
+    }, {passive:false});
+  }
+
+  // Menu mobile.
+  const menu = $('.menu-toggle'), nav = $('.site-nav');
+  if (menu && nav) {
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') === 'true';
+      menu.setAttribute('aria-expanded', String(!open)); nav.classList.toggle('open', !open);
+    });
+    $$('a', nav).forEach(a => a.addEventListener('click', () => { menu.setAttribute('aria-expanded','false'); nav.classList.remove('open'); }));
+  }
+
+  // Lightbox com teclado e navegação.
+  const lightbox = $('.lightbox');
+  const lightboxItems = $$('[data-lightbox]');
+  if (lightbox && lightboxItems.length) {
+    const image = $('.lightbox-media img', lightbox), caption = $('.lightbox-caption', lightbox);
+    let current = 0;
+    const open = index => {
+      current = index;
+      const source = lightboxItems[current];
+      const img = $('img', source);
+      image.src = img.currentSrc || img.src; image.alt = img.alt || '';
+      caption.textContent = source.dataset.caption || img.alt || '';
+      lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); document.body.classList.add('locked');
+    };
+    const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); document.body.classList.remove('locked'); };
+    const next = dir => open((current + dir + lightboxItems.length) % lightboxItems.length);
+    lightboxItems.forEach((item, index) => item.addEventListener('click', () => open(index)));
+    $('.lightbox-close', lightbox)?.addEventListener('click', close);
+    $('.lightbox-prev', lightbox)?.addEventListener('click', () => next(-1));
+    $('.lightbox-next', lightbox)?.addEventListener('click', () => next(1));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+    addEventListener('keydown', e => { if (!lightbox.classList.contains('open')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowRight') next(1); if (e.key === 'ArrowLeft') next(-1); });
+  }
+})();
+
+  </script>
 </body>
 </html>
