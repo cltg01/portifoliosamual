@@ -15,7 +15,7 @@
 <body>
   <div class="noise" aria-hidden="true"></div>
   <div class="scroll-line"><span></span></div>
-  <div class="cursor" aria-hidden="true"><i></i><span>VIEW</span></div>
+
 
   <header class="site-header">
     <a class="logo" href="#inicio" aria-label="Samuel Davidson — início">
@@ -81,6 +81,16 @@
           <div class="work-image"><img src="assets/IMG_2003.jpg" alt="Momento de oração" loading="lazy"></div>
           <div class="work-info"><span>Religioso / Autoral</span><h3>Momento de Oração</h3><p>Silêncio, cuidado e expressão.</p><b>Ver projeto <i>↗</i></b></div>
         </a>
+        <a class="work-item magnetic-area" href="projetos/aniversarios.html" data-cursor="OPEN">
+          <div class="work-number">04</div>
+          <div class="work-image"><img src="assets/IMG_9552.jpg" alt="Momento de oração" loading="lazy"></div>
+          <div class="work-info"><span>Aniversarios / Autoral</span><h3>Aniversarios</h3><p>Silêncio, cuidado e expressão.</p><b>Ver projeto <i>↗</i></b></div>
+        </a>
+          <a class="work-item magnetic-area" href="projetos/ensaios.html" data-cursor="OPEN">
+          <div class="work-number">05</div>
+          <div class="work-image"><img src="assets/IMG_7982.jpg" alt="Momento de oração" loading="lazy"></div>
+          <div class="work-info"><span>Aniversarios / Autoral</span><h3>Aniversarios</h3><p>Silêncio, cuidado e expressão.</p><b>Ver projeto <i>↗</i></b></div>
+        </a>
       </div>
     </section>
 
@@ -102,17 +112,17 @@
         <figure class="gallery-frame" data-lightbox data-caption="Adrenalina em movimento">
           <img src="assets/IMG_4139.jpg" alt="Motocross" loading="lazy"><figcaption>04 / Movimento</figcaption>
         </figure>
-        <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Além dos limites">
-          <img src="assets/IMG_1087.jpg" alt="Ação e movimento" loading="lazy"><figcaption>05 / Limites</figcaption>
+        <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Segundos que ficam eternos">
+          <img src="assets/IMG_111111.jpeg" alt="Ação e movimento" loading="lazy"><figcaption>05 / Eternidades</figcaption>
         </figure>
          <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Conquistas que marcam">
           <img src="assets/IMG_4346.jpg" alt="Ação e movimento" loading="lazy"><figcaption>06 / Conquistas</figcaption>
         </figure>
-        <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Aventuras únicas">
+        <!-- <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Aventuras únicas">
           <img src="assets/IMG_4005.jpg" alt="Ação e movimento" loading="lazy"><figcaption>07 / Aventuas</figcaption>
-        </figure>
+        </figure> -->
         <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Momentos desafiadores">
-          <img src="assets/IMG_1150.jpg" alt="Ação e movimento" loading="lazy"><figcaption>08 / Momentos</figcaption>
+          <img src="assets/IMG_1150.jpg" alt="Ação e movimento" loading="lazy"><figcaption>07 / Momentos</figcaption>
         </figure>
         <div class="gallery-end"><span>FIM DA SESSÃO</span><strong>↘</strong></div>
       </div>
@@ -131,13 +141,13 @@
     </section>
 
     <section class="about section-pad" id="sobre">
-      <div class="about-image" data-parallax="0.02"><img src="assets/perfil.jpg" alt="Samuel Davidson" loading="lazy"></div>
+      <div class="about-image" data-parallax="0.02"><img src="assets/perfil2.jpeg" alt="Samuel Davidson" loading="lazy"></div>
       <div class="about-copy"><span class="eyebrow">04 / Sobre</span><h2>Fotografia com<br><em>presença.</em></h2><p>Sou Samuel Davidson, fotógrafo com atuação em ensaios, eventos, congressos, espetáculos e projetos audiovisuais. Meu trabalho procura unir técnica, direção e sensibilidade para transformar cenas reais em imagens que continuam falando depois do evento.</p><div class="about-meta"><span>Fortaleza e região metropolitana</span><span>+2 anos de experiência</span><span>Ensaios · Eventos · Lifestyle · Comercial</span></div></div>
     </section>
 
     <section class="contact section-pad" id="contato">
       <div class="contact-top"><span class="eyebrow">05 / Contato</span><span>Disponível conforme agendamento</span></div>
-      <h2>Tem uma história<br>para <em>contar?</em></h2>
+      <h2>Tem uma história<br>para <em>contar?</em></h2> <br>
       <div class="contact-bottom"><p>Vamos conversar sobre o próximo ensaio, evento ou projeto.</p><a class="contact-link magnetic" href="https://wa.me/5585986258448?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener">Falar no WhatsApp <span>↗</span></a></div>
       <div class="contact-details"><a href="mailto:contato.camdavidson@gmail.com">contato.camdavidson@gmail.com</a><a href="https://www.instagram.com/davidson.lens" target="_blank" rel="noopener">@davidson.lens</a><span>Maracanaú / Fortaleza — CE</span></div>
     </section>
@@ -157,24 +167,6 @@
 
   $('#year') && ($('#year').textContent = new Date().getFullYear());
 
-  // Cursor de visor: some em touch e muda de mensagem conforme a área.
-  const cursor = $('.cursor');
-  const finePointer = matchMedia('(hover:hover) and (pointer:fine)').matches;
-  if (cursor && finePointer) {
-    document.body.classList.add('custom-cursor');
-    window.addEventListener('pointermove', e => {
-      cursor.style.transform = `translate3d(${e.clientX}px,${e.clientY}px,0)`;
-    }, {passive:true});
-    $$('[data-cursor], [data-lightbox], .magnetic, a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('active');
-        const label = el.dataset.cursor || (el.matches('[data-lightbox]') ? 'ZOOM' : el.matches('a') ? 'OPEN' : 'VIEW');
-        const span = $('span', cursor); if (span) span.textContent = label;
-      });
-      el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
-    });
-  }
-
   // Barra de progresso.
   const progress = $('.scroll-line span');
   const updateProgress = () => {
@@ -190,20 +182,7 @@
   }, {threshold:.12});
   $$('.work-item, .manifesto-copy, .process-copy, .process-steps article, .about-copy, .section-heading, .gallery-frame, .contact').forEach(el => { el.classList.add('reveal'); reveal.observe(el); });
 
-  // Parallax discreto, apenas em desktop.
-  if (finePointer) {
-    const parallaxEls = $$('[data-parallax]');
-    addEventListener('scroll', () => {
-      const viewport = innerHeight;
-      parallaxEls.forEach(el => {
-        const r = el.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > viewport) return;
-        const amount = Number(el.dataset.parallax || .02);
-        const offset = (r.top - viewport / 2) * amount;
-        el.style.setProperty('--parallax', `${offset}px`);
-      });
-    }, {passive:true});
-  }
+ 
 
   // Botões magnéticos — pequeno movimento, sem exagero.
   if (finePointer) {
