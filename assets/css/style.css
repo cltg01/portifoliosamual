@@ -867,108 +867,11 @@ footer {
 }
 
 /* ============================================================
-   RESPONSIVO
-   ============================================================ */
-@media (max-width: 900px) {
-  .site-nav { display: none; }
-  .site-nav.open {
-    position: absolute;
-    top: 70px;
-    left: 15px; right: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 20px;
-    background: rgba(12, 10, 8, .97);
-    border: 1px solid var(--line);
-  }
-  .site-nav.open a { padding: 13px 0; border-bottom: 1px solid var(--line); }
-
-  .menu-toggle {
-    display: flex;
-    width: 40px; height: 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    position: absolute;
-    right: 125px;
-  }
-  .menu-toggle span {
-    display: block;
-    height: 2px;
-    width: 23px;
-    background: #fff;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, .55);
-  }
-
-  .manifesto, .process-layout, .about { grid-template-columns: 1fr; }
-  .section-heading { align-items: start; flex-direction: column; }
-
-  .work-item { grid-template-columns: 40px 1fr; gap: 15px; }
-  .work-number {
-    writing-mode: horizontal-tb;
-    transform: none;
-    align-self: start;
-    padding-top: 6px;
-  }
-  .work-image { grid-column: 2; height: 280px; }
-  .work-info { grid-column: 2; }
-
-  .about { gap: 55px; }
-  .contact-bottom { align-items: start; flex-direction: column; }
-  .contact-details { flex-wrap: wrap; }
-}
-
-@media (max-width: 600px) {
-  .site-header { height: 70px; }
-  .logo b { display: none; }
-  .menu-toggle { right: 125px; }
-
-  .hero { min-height: 620px; }
-  .hero-top { top: 90px; font-size: 8px; }
-  .hero-top span:last-child { display: none; }
-  .hero-bottom { font-size: 8px; }
-  .hero-title { bottom: 18vh; }
-  .hero-intro { font-size: 12px; max-width: 300px; }
-
-  .section-pad { padding-top: 90px; padding-bottom: 90px; }
-
-  .manifesto-copy h2,
-  .section-heading h2,
-  .process h2,
-  .about h2 { font-size: 54px; }
-
-  .work-image { height: 230px; }
-
-  .gallery-frame { flex-basis: 78vw; height: 500px; }
-  .gallery-frame-wide { flex-basis: 115vw; }
-
-  .about-meta { grid-template-columns: 1fr; }
-  .contact { min-height: 90vh; }
-  .contact h2 { font-size: 70px; }
-  .contact-details { flex-direction: column; gap: 12px; }
-
-  .preloader-meta strong { font-size: 32px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; filter: none; transition: none; }
-  .gallery-frame img, .work-image img { transition: none; }
-  .hero-image-wrap, .about-image { transform: none !important; }
-  .preloader-frames { animation: none; }
-}
-/* ============================================================
    PÁGINAS INTERNAS — PROJETOS
    ============================================================ */
+.inner-main { padding-top: 82px; }
 
-/* Compensa o header fixo */
-.inner-main {
-  padding-top: 82px;
-}
-
-/* ---------- Intro do projeto ---------- */
+/* Intro do projeto */
 .project-intro,
 .inner-hero {
   min-height: 70vh;
@@ -998,7 +901,7 @@ footer {
   font-size: 15px;
 }
 
-/* ---------- Imagem hero do projeto — MOLDURA DE FILME ---------- */
+/* Imagem hero do projeto — MOLDURA DE FILME */
 .project-hero-image {
   margin: 0 max(22px, 4vw);
   height: min(80vh, 900px);
@@ -1010,10 +913,7 @@ footer {
   border: 1px solid rgba(201, 168, 118, .15);
   transition: border-color .4s ease;
 }
-
-.project-hero-image:hover {
-  border-color: rgba(201, 168, 118, .4);
-}
+.project-hero-image:hover { border-color: rgba(201, 168, 118, .4); }
 
 .project-hero-image img {
   width: 100%;
@@ -1022,13 +922,12 @@ footer {
   filter: grayscale(.15) contrast(1.08) sepia(.06);
   transition: transform 1s cubic-bezier(.2, .65, .2, 1), filter .6s ease;
 }
-
 .project-hero-image:hover img {
   transform: scale(1.02);
   filter: grayscale(0) contrast(1.1);
 }
 
-/* Etiqueta de filme no canto da imagem hero */
+/* Etiqueta de filme */
 .project-hero-image::after {
   content: "◆ 35MM — SESSION";
   position: absolute;
@@ -1046,7 +945,7 @@ footer {
   pointer-events: none;
 }
 
-/* ---------- Nota do projeto (descrição) ---------- */
+/* Nota do projeto (descrição) */
 .project-note {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1073,7 +972,7 @@ footer {
   letter-spacing: -.02em;
 }
 
-/* ---------- Galeria do projeto (grid) ---------- */
+/* Galeria do projeto (grid) */
 .project-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1092,10 +991,7 @@ footer {
   border: 1px solid rgba(201, 168, 118, .12);
   transition: border-color .4s ease;
 }
-
-.project-gallery figure:hover {
-  border-color: rgba(201, 168, 118, .4);
-}
+.project-gallery figure:hover { border-color: rgba(201, 168, 118, .4); }
 
 .project-gallery figure.wide {
   grid-column: 1 / -1;
@@ -1109,13 +1005,12 @@ footer {
   filter: grayscale(.2) contrast(1.06) sepia(.05);
   transition: transform .9s cubic-bezier(.2, .65, .2, 1), filter .6s ease;
 }
-
 .project-gallery figure:hover img {
   transform: scale(1.03);
   filter: grayscale(0) contrast(1.1);
 }
 
-/* Legenda FRAME 01, 02... dentro da moldura */
+/* Legenda FRAME 01, 02... */
 .project-gallery figcaption {
   position: absolute;
   left: 24px;
@@ -1132,11 +1027,8 @@ footer {
   pointer-events: none;
 }
 
-/* ---------- Link de voltar ---------- */
-.back-link {
-  padding: 110px max(22px, 4vw);
-}
-
+/* Link de voltar */
+.back-link { padding: 110px max(22px, 4vw); }
 .back-link a {
   font-family: var(--mono);
   font-size: 11px;
@@ -1147,13 +1039,12 @@ footer {
   padding-bottom: 7px;
   transition: color .3s ease, border-color .3s ease;
 }
-
 .back-link a:hover {
   color: var(--paper);
   border-color: var(--paper);
 }
 
-/* ---------- Masonry gallery (usada em algumas páginas) ---------- */
+/* Masonry gallery (usada em algumas páginas) */
 .masonry-gallery {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -1179,7 +1070,6 @@ footer {
   filter: grayscale(.2) contrast(1.06);
   transition: transform .8s ease, filter .5s ease;
 }
-
 .masonry-gallery figure:hover img {
   transform: scale(1.03);
   filter: grayscale(0) contrast(1.1);
@@ -1199,18 +1089,126 @@ footer {
   border: 1px solid rgba(201, 168, 118, .3);
 }
 
-/* ---------- Ajuste do botão de menu no mobile (páginas internas) ---------- */
+/* ============================================================
+   RESPONSIVO — GERAL
+   ============================================================ */
 @media (max-width: 900px) {
-  .menu-toggle {
-    right: 22px; /* nas páginas internas não tem CTA grande empurrando */
+  /* ===== NAV MOBILE ===== */
+  .site-nav { display: none; }
+  .site-nav.open {
+    position: absolute;
+    top: 70px;
+    left: 15px; right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    background: rgba(12, 10, 8, .97);
+    border: 1px solid var(--line);
   }
+  .site-nav.open a { padding: 13px 0; border-bottom: 1px solid var(--line); }
+
+  /* ===== HEADER — CORREÇÃO DO BUG ===== */
+  .site-header {
+    gap: 12px;
+  }
+
+  .header-cta {
+    font-size: 10px;
+    padding: 8px 12px;
+    margin-left: auto;
+    margin-right: 56px; /* reserva espaço pro hambúrguer */
+  }
+
+  .menu-toggle {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 23px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .55);
+  }
+
+  /* ===== LAYOUTS ===== */
+  .manifesto, .process-layout, .about { grid-template-columns: 1fr; }
+  .section-heading { align-items: start; flex-direction: column; }
+
+  .work-item { grid-template-columns: 40px 1fr; gap: 15px; }
+  .work-number {
+    writing-mode: horizontal-tb;
+    transform: none;
+    align-self: start;
+    padding-top: 6px;
+  }
+  .work-image { grid-column: 2; height: 280px; }
+  .work-info { grid-column: 2; }
+
+  .about { gap: 55px; }
+  .contact-bottom { align-items: start; flex-direction: column; }
+  .contact-details { flex-wrap: wrap; }
+
+  /* ===== PÁGINAS INTERNAS MOBILE ===== */
+  .project-gallery figure { height: 450px; }
 }
 
 @media (max-width: 600px) {
+  .site-header {
+    height: 70px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .logo b { display: none; }
+
+  .header-cta {
+    margin-right: 52px; /* espaço pro hambúrguer */
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
   .menu-toggle {
     right: 22px;
   }
 
+  .hero { min-height: 620px; }
+  .hero-top { top: 90px; font-size: 8px; }
+  .hero-top span:last-child { display: none; }
+  .hero-bottom { font-size: 8px; }
+  .hero-title { bottom: 18vh; }
+  .hero-intro { font-size: 12px; max-width: 300px; }
+
+  .section-pad { padding-top: 90px; padding-bottom: 90px; }
+
+  .manifesto-copy h2,
+  .section-heading h2,
+  .process h2,
+  .about h2 { font-size: 54px; }
+
+  .work-image { height: 230px; }
+
+  .gallery-frame { flex-basis: 78vw; height: 500px; }
+  .gallery-frame-wide { flex-basis: 115vw; }
+
+  .about-meta { grid-template-columns: 1fr; }
+  .contact { min-height: 90vh; }
+  .contact h2 { font-size: 70px; }
+  .contact-details { flex-direction: column; gap: 12px; }
+
+  .preloader-meta strong { font-size: 32px; }
+
+  /* ===== PÁGINAS INTERNAS — MOBILE ===== */
   .project-intro,
   .inner-hero {
     min-height: 60vh;
@@ -1218,9 +1216,7 @@ footer {
   }
 
   .project-intro h1,
-  .inner-hero h1 {
-    font-size: 72px;
-  }
+  .inner-hero h1 { font-size: 72px; }
 
   .project-hero-image {
     height: 60vh;
@@ -1239,10 +1235,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
-  .project-note p {
-    font-size: 26px;
-  }
+  .project-note p { font-size: 26px; }
 
   .project-gallery {
     grid-template-columns: 1fr;
@@ -1250,16 +1243,11 @@ footer {
     padding: 0 16px;
     padding-top: 60px;
   }
-
   .project-gallery figure {
     height: 70vh;
     padding: 10px;
   }
-
-  .project-gallery figure.wide {
-    height: 70vh;
-  }
-
+  .project-gallery figure.wide { height: 70vh; }
   .project-gallery figcaption {
     left: 18px;
     bottom: 18px;
@@ -1270,9 +1258,16 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-
   .masonry-gallery figure,
   .masonry-gallery figure:nth-child(n) {
     grid-column: span 1;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; filter: none; transition: none; }
+  .gallery-frame img, .work-image img { transition: none; }
+  .hero-image-wrap, .about-image { transform: none !important; }
+  .preloader-frames { animation: none; }
 }
