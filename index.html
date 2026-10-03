@@ -9,15 +9,41 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+  <!-- ===== PRELOADER / FILME ENTRANDO NA CÂMERA ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-strip">
+      <div class="preloader-frames" id="filmFrames">
+        <div class="preloader-frame" data-num="001"></div>
+        <div class="preloader-frame" data-num="002"></div>
+        <div class="preloader-frame" data-num="003"></div>
+        <div class="preloader-frame" data-num="004"></div>
+        <div class="preloader-frame" data-num="005"></div>
+        <div class="preloader-frame" data-num="006"></div>
+      </div>
+    </div>
+    <div class="preloader-meta">
+      <strong>Samuel Davidson</strong>
+      <span id="preloaderStatus">Carregando filme...</span>
+      <div class="preloader-counter" id="preloaderCounter">000%</div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR CÂMERA ===== -->
+  <div class="camera-cursor" id="cameraCursor" aria-hidden="true">
+    <span class="cross-v"></span>
+    <span class="cross-h"></span>
+  </div>
+
+  <!-- ===== GRÃO + LINHA DE SCROLL ===== -->
   <div class="noise" aria-hidden="true"></div>
   <div class="scroll-line"><span></span></div>
 
-
-  <header class="site-header">
+  <header class="site-header" id="siteHeader">
     <a class="logo" href="#inicio" aria-label="Samuel Davidson — início">
       <span>SD</span><b>Samuel Davidson</b>
     </a>
@@ -39,19 +65,21 @@
       </div>
       <div class="hero-top"><span>Fotografia / Direção visual</span><span>Fortaleza — CE</span></div>
       <div class="hero-title">
-        <p class="eyebrow">Samuel Davidson</p>
+        <p class="eyebrow">◆ Samuel Davidson</p>
         <h1>Olhar<br><em>direcionado.</em></h1>
         <p class="hero-intro">Retratos, eventos e histórias transformadas em imagem — com presença, direção e intenção.</p>
       </div>
       <div class="hero-bottom">
         <span>Scroll para explorar</span>
         <span class="scroll-mark">↓</span>
-        <span>01 / 05</span>
+        <span>FRAME 01 / 06</span>
       </div>
     </section>
 
+    <div class="film-divider" aria-hidden="true"></div>
+
     <section class="manifesto section-pad">
-      <div class="section-index">00 / O OLHAR</div>
+      <div class="section-index">◆ 00 / O OLHAR</div>
       <div class="manifesto-copy">
         <p class="eyebrow">Não é só registrar.</p>
         <h2>É perceber o instante antes que ele passe.</h2>
@@ -61,75 +89,76 @@
 
     <section class="works section-pad" id="trabalhos">
       <div class="section-heading">
-        <div><span class="eyebrow">01 / Trabalhos</span><h2>Histórias em <em>frames.</em></h2></div>
+        <div><span class="eyebrow">◆ 01 / Trabalhos</span><h2>Histórias em <em>frames.</em></h2></div>
         <p>Uma seleção de projetos em que luz, movimento e pessoas conduzem a narrativa.</p>
       </div>
 
       <div class="work-list">
         <a class="work-item magnetic-area" href="projetos/julie-wein.html" data-cursor="OPEN">
-          <div class="work-number">01</div>
+          <div class="work-number">FRAME 001</div>
           <div class="work-image"><img src="assets/webp/camdavx-415.webp" alt="Julie Wein no palco" loading="lazy"></div>
           <div class="work-info"><span>Música / Evento</span><h3>Julie Wein</h3><p>Palco, luz e presença.</p><b>Ver projeto <i>↗</i></b></div>
         </a>
         <a class="work-item magnetic-area" href="projetos/ensaios-familia.html" data-cursor="OPEN">
-          <div class="work-number">02</div>
+          <div class="work-number">FRAME 002</div>
           <div class="work-image"><img src="assets/webp/IMG_2512.webp" alt="Ensaio de família" loading="lazy"></div>
           <div class="work-info"><span>Retrato / Lifestyle</span><h3>Ensaio de Família</h3><p>Afeto sem pose forçada.</p><b>Ver projeto <i>↗</i></b></div>
         </a>
         <a class="work-item magnetic-area" href="projetos/momento-oracao.html" data-cursor="OPEN">
-          <div class="work-number">03</div>
+          <div class="work-number">FRAME 003</div>
           <div class="work-image"><img src="assets/webp/IMG_2003.webp" alt="Momento de oração" loading="lazy"></div>
           <div class="work-info"><span>Religioso / Autoral</span><h3>Momento de Oração</h3><p>Silêncio, cuidado e expressão.</p><b>Ver projeto <i>↗</i></b></div>
         </a>
         <a class="work-item magnetic-area" href="projetos/aniversarios.html" data-cursor="OPEN">
-          <div class="work-number">04</div>
+          <div class="work-number">FRAME 004</div>
           <div class="work-image"><img src="assets/IMG_9552.jpg" alt="Aniversários" loading="lazy"></div>
-          <div class="work-info"><span>Aniversários / Autoral</span><h3>Aniversários</h3><p>espontaneidade, carinho e muito amor envolvido.</p><b>Ver projeto <i>↗</i></b></div>
+          <div class="work-info"><span>Aniversários / Autoral</span><h3>Aniversários</h3><p>Espontaneidade, carinho e muito amor envolvido.</p><b>Ver projeto <i>↗</i></b></div>
         </a>
-          <a class="work-item magnetic-area" href="projetos/ensaios.html" data-cursor="OPEN">
-          <div class="work-number">05</div>
+        <a class="work-item magnetic-area" href="projetos/ensaios.html" data-cursor="OPEN">
+          <div class="work-number">FRAME 005</div>
           <div class="work-image"><img src="assets/webp/IMG_7982.webp" alt="Ensaios personalizados" loading="lazy"></div>
-          <div class="work-info"><span>Ensaios Personalizados / Autoral</span><h3>Ensaios Personalizados</h3><p>poses e movimentos pensados de forma estratégica.</p><b>Ver projeto <i>↗</i></b></div>
+          <div class="work-info"><span>Ensaios Personalizados / Autoral</span><h3>Ensaios Personalizados</h3><p>Poses e movimentos pensados de forma estratégica.</p><b>Ver projeto <i>↗</i></b></div>
         </a>
       </div>
     </section>
 
+    <div class="film-divider" aria-hidden="true"></div>
+
     <section class="gallery-section section-pad" id="ensaios">
       <div class="section-heading gallery-heading">
-        <div><span class="eyebrow">02 / Galeria</span><h2>Momentos que<br><em>continuam.</em></h2></div>
+        <div><span class="eyebrow">◆ 02 / Galeria</span><h2>Momentos que<br><em>continuam.</em></h2></div>
         <p>Arraste, role ou passe o mouse. A galeria foi pensada para ser explorada, não apenas percorrida.</p>
       </div>
       <div class="horizontal-gallery" data-horizontal>
         <figure class="gallery-frame gallery-frame-wide" data-lightbox data-caption="Fotografia automotiva">
-          <img src="assets/webp/IMG_4914.webp" alt="Fotografia automotiva" loading="lazy"><figcaption>01 / Automotiva</figcaption>
+          <img src="assets/webp/IMG_4914.webp" alt="Fotografia automotiva" loading="lazy"><figcaption>FRAME 01 / Automotiva</figcaption>
         </figure>
         <figure class="gallery-frame" data-lightbox data-caption="Memórias que marcam">
-          <img src="assets/webp/IMG_1786.webp" alt="Memórias que marcam" loading="lazy"><figcaption>02 / Memórias</figcaption>
+          <img src="assets/webp/IMG_1786.webp" alt="Memórias que marcam" loading="lazy"><figcaption>FRAME 02 / Memórias</figcaption>
         </figure>
         <figure class="gallery-frame" data-lightbox data-caption="Detalhes que chamaram atenção">
-          <img src="assets/webp/IMG_1394.webp" alt="Detalhes" loading="lazy"><figcaption>03 / Detalhes</figcaption>
+          <img src="assets/webp/IMG_1394.webp" alt="Detalhes" loading="lazy"><figcaption>FRAME 03 / Detalhes</figcaption>
         </figure>
         <figure class="gallery-frame" data-lightbox data-caption="Adrenalina em movimento">
-          <img src="assets/webp/IMG_4139.webp" alt="Motocross" loading="lazy"><figcaption>04 / Movimento</figcaption>
+          <img src="assets/webp/IMG_4139.webp" alt="Motocross" loading="lazy"><figcaption>FRAME 04 / Movimento</figcaption>
         </figure>
         <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Segundos que ficam eternos">
-          <img src="assets/IMG_111111.jpeg" alt="Ação e movimento" loading="lazy"><figcaption>05 / Eternidades</figcaption>
+          <img src="assets/IMG_111111.jpeg" alt="Ação e movimento" loading="lazy"><figcaption>FRAME 05 / Eternidades</figcaption>
         </figure>
-         <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Conquistas que marcam">
-          <img src="assets/webp/IMG_4346.webp" alt="Ação e movimento" loading="lazy"><figcaption>06 / Conquistas</figcaption>
+        <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Conquistas que marcam">
+          <img src="assets/webp/IMG_4346.webp" alt="Ação e movimento" loading="lazy"><figcaption>FRAME 06 / Conquistas</figcaption>
         </figure>
-        <!-- <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Aventuras únicas">
-          <img src="assets/IMG_4005.jpg" alt="Ação e movimento" loading="lazy"><figcaption>07 / Aventuas</figcaption>
-        </figure> -->
         <figure class="gallery-frame gallery-frame-tall" data-lightbox data-caption="Momentos desafiadores">
-          <img src="assets/webp/IMG_1150.webp" alt="Ação e movimento" loading="lazy"><figcaption>07 / Momentos</figcaption>
+          <img src="assets/webp/IMG_1150.webp" alt="Ação e movimento" loading="lazy"><figcaption>FRAME 07 / Momentos</figcaption>
         </figure>
         <div class="gallery-end"><span>FIM DA SESSÃO</span><strong>↘</strong></div>
       </div>
     </section>
 
+    <div class="film-divider" aria-hidden="true"></div>
+
     <section class="process section-pad">
-      <div class="section-index">03 / PROCESSO</div>
+      <div class="section-index">◆ 03 / PROCESSO</div>
       <div class="process-layout">
         <div class="process-copy"><span class="eyebrow">Por trás da fotografia</span><h2>Antes do<br><em>clique.</em></h2><p>Direção, enquadramento, luz e timing fazem parte da imagem final. O resultado começa muito antes do disparo.</p></div>
         <div class="process-steps">
@@ -142,11 +171,11 @@
 
     <section class="about section-pad" id="sobre">
       <div class="about-image" data-parallax="0.02"><img src="assets/perfil2.jpeg" alt="Samuel Davidson" loading="lazy"></div>
-      <div class="about-copy"><span class="eyebrow">04 / Sobre</span><h2>Fotografia com<br><em>presença.</em></h2><p>Sou Samuel Davidson, fotógrafo com atuação em ensaios, eventos, congressos, espetáculos e projetos audiovisuais. Meu trabalho procura unir técnica, direção e sensibilidade para transformar cenas reais em imagens que continuam falando depois do evento.</p><div class="about-meta"><span>Fortaleza e região metropolitana</span><span>+2 anos de experiência</span><span>Ensaios · Eventos · Lifestyle · Comercial</span></div></div>
+      <div class="about-copy"><span class="eyebrow">◆ 04 / Sobre</span><h2>Fotografia com<br><em>presença.</em></h2><p>Sou Samuel Davidson, fotógrafo com atuação em ensaios, eventos, congressos, espetáculos e projetos audiovisuais. Meu trabalho procura unir técnica, direção e sensibilidade para transformar cenas reais em imagens que continuam falando depois do evento.</p><div class="about-meta"><span>Fortaleza e região metropolitana</span><span>+2 anos de experiência</span><span>Ensaios · Eventos · Lifestyle · Comercial</span></div></div>
     </section>
 
     <section class="contact section-pad" id="contato">
-      <div class="contact-top"><span class="eyebrow">05 / Contato</span><span>Disponível conforme agendamento</span></div>
+      <div class="contact-top"><span class="eyebrow">◆ 05 / Contato</span><span>Disponível conforme agendamento</span></div>
       <h2>Tem uma história<br>para <em>contar?</em></h2> <br>
       <div class="contact-bottom"><p>Vamos conversar sobre o próximo ensaio, evento ou projeto.</p><a class="contact-link magnetic" href="https://wa.me/5585986258448?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener">Falar no WhatsApp <span>↗</span></a></div>
       <div class="contact-details"><a href="mailto:contato.camdavidson@gmail.com">contato.camdavidson@gmail.com</a><a href="https://www.instagram.com/davidson.lens" target="_blank" rel="noopener">@davidson.lens</a><span>Maracanaú / Fortaleza — CE</span></div>
@@ -160,156 +189,5 @@
   </div>
 
   <script src="assets/js/main.js"></script>
-  <script>
-    (() => {
-  const $ = (s, root = document) => root.querySelector(s);
-  const $$ = (s, root = document) => [...root.querySelectorAll(s)];
-
-  $('#year') && ($('#year').textContent = new Date().getFullYear());
-
-  // Barra de progresso.
-  const progress = $('.scroll-line span');
-  const updateProgress = () => {
-    if (!progress) return;
-    const max = document.documentElement.scrollHeight - innerHeight;
-    progress.style.width = `${max ? (scrollY / max) * 100 : 0}%`;
-  };
-  addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
-
-  // Entrada suave dos elementos.
-  const reveal = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); reveal.unobserve(entry.target); } });
-  }, {threshold:.12});
-  $$('.work-item, .manifesto-copy, .process-copy, .process-steps article, .about-copy, .section-heading, .gallery-frame, .contact').forEach(el => { el.classList.add('reveal'); reveal.observe(el); });
-
- 
-
-  // Botões magnéticos — pequeno movimento, sem exagero.
-  if (finePointer) {
-    $$('.magnetic').forEach(el => {
-      el.addEventListener('pointermove', e => {
-        const r = el.getBoundingClientRect();
-        const x = (e.clientX - r.left - r.width/2) * .12;
-        const y = (e.clientY - r.top - r.height/2) * .12;
-        el.style.transform = `translate(${x}px,${y}px)`;
-      });
-      el.addEventListener('pointerleave', () => el.style.transform = '');
-    });
-  }
-
- // Galeria horizontal
-const horizontal = $('[data-horizontal]');
-
-if (horizontal) {
-
-  // Desktop: mouse wheel controla a galeria horizontal
-  if (finePointer) {
-    horizontal.addEventListener('wheel', e => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        horizontal.scrollLeft += e.deltaY * 1.15;
-      }
-    }, { passive: false });
-  }
-
-  // Passagem automática
-  let galleryTimer;
-  let galleryPaused = false;
-
-  const startGallery = () => {
-    clearInterval(galleryTimer);
-
-    galleryTimer = setInterval(() => {
-
-      if (galleryPaused) return;
-
-      const maxScroll = horizontal.scrollWidth - horizontal.clientWidth;
-
-      if (horizontal.scrollLeft >= maxScroll - 5) {
-        horizontal.scrollTo({
-          left: 0,
-          behavior: 'smooth'
-        });
-      } else {
-        horizontal.scrollBy({
-          left: window.innerWidth <= 600
-            ? window.innerWidth * 0.78 + 18
-            : window.innerWidth * 0.55,
-          behavior: 'smooth'
-        });
-      }
-
-    }, 3500);
-  };
-
-  // Pausa quando o usuário interage
-  horizontal.addEventListener('mouseenter', () => {
-    galleryPaused = true;
-  });
-
-  horizontal.addEventListener('mouseleave', () => {
-    galleryPaused = false;
-  });
-
-  horizontal.addEventListener('touchstart', () => {
-    galleryPaused = true;
-  }, { passive: true });
-
-  horizontal.addEventListener('touchend', () => {
-    setTimeout(() => {
-      galleryPaused = false;
-    }, 2500);
-  }, { passive: true });
-
-  horizontal.addEventListener('pointerdown', () => {
-    galleryPaused = true;
-  });
-
-  horizontal.addEventListener('pointerup', () => {
-    setTimeout(() => {
-      galleryPaused = false;
-    }, 2500);
-  });
-
-  startGallery();
-}
- 
-
-  // Menu mobile.
-  const menu = $('.menu-toggle'), nav = $('.site-nav');
-  if (menu && nav) {
-    menu.addEventListener('click', () => {
-      const open = menu.getAttribute('aria-expanded') === 'true';
-      menu.setAttribute('aria-expanded', String(!open)); nav.classList.toggle('open', !open);
-    });
-    $$('a', nav).forEach(a => a.addEventListener('click', () => { menu.setAttribute('aria-expanded','false'); nav.classList.remove('open'); }));
-  }
-
-  // Lightbox com teclado e navegação.
-  const lightbox = $('.lightbox');
-  const lightboxItems = $$('[data-lightbox]');
-  if (lightbox && lightboxItems.length) {
-    const image = $('.lightbox-media img', lightbox), caption = $('.lightbox-caption', lightbox);
-    let current = 0;
-    const open = index => {
-      current = index;
-      const source = lightboxItems[current];
-      const img = $('img', source);
-      image.src = img.currentSrc || img.src; image.alt = img.alt || '';
-      caption.textContent = source.dataset.caption || img.alt || '';
-      lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); document.body.classList.add('locked');
-    };
-    const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); document.body.classList.remove('locked'); };
-    const next = dir => open((current + dir + lightboxItems.length) % lightboxItems.length);
-    lightboxItems.forEach((item, index) => item.addEventListener('click', () => open(index)));
-    $('.lightbox-close', lightbox)?.addEventListener('click', close);
-    $('.lightbox-prev', lightbox)?.addEventListener('click', () => next(-1));
-    $('.lightbox-next', lightbox)?.addEventListener('click', () => next(1));
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-    addEventListener('keydown', e => { if (!lightbox.classList.contains('open')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowRight') next(1); if (e.key === 'ArrowLeft') next(-1); });
-  }
-})();
-
-  </script>
 </body>
 </html>
